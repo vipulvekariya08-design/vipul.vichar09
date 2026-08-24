@@ -1,0 +1,1 @@
+Put your real logo at assets/logo.png and your photo at assets/vipul-photo.jpg.
