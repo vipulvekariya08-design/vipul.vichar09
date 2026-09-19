@@ -22,7 +22,26 @@
         href="css/style.css">
 
   <style>
+/* ======================================================
+   READER CONTENT PROTECTION
+   Discourages normal selection and copying
+   ====================================================== */
 
+#book,
+#book * {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+
+  -webkit-touch-callout: none !important;
+}
+
+#book img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+}
     /* ======================================================
        VIPUL VEKARIYA
        FINAL LITERARY READER
@@ -623,15 +642,26 @@
 
 <!-- EXISTING SITE SYSTEM -->
 
-<script src="js/app.js"></script>
+  const range = selection.getRangeAt(0);
 
-<script src="js/protection.js"></script>
+        if (
+          book.contains(range.commonAncestorContainer) ||
+          range.commonAncestorContainer === book
+        ) {
 
-<script src="js/reader.js"></script>
+          event.preventDefault();
+          selection.removeAllRanges();
 
+        }
 
-<script>
+      }
 
+    }
+
+  });
+
+})();
+</script>
   document.getElementById(
     "readerYear"
   ).textContent =
