@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "id": "quote-001",
+    "language": "English",
+    "quote": "Your English quote here."
+  },
+  {
+    "id": "quote-002",
+    "language": "Gujarati",
+    "quote": "તમારો ગુજરાતી વિચાર અહીં."
+  },
+  {
+    "id": "quote-003",
+    "language": "Hindi",
+    "quote": "आपका हिन्दी विचार यहाँ।"
+  }
+]
