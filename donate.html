@@ -1,1 +1,958 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Vipul Vekariya Literary Website — original literature in English, Gujarati and Hindi."><title>Support Education | Vipul Vekariya</title><link rel="stylesheet" href="css/style.css"></head><body><main><section class='section'><div class='wrap'><h1 class='page-title'>Support Education</h1><p>If you value this literary work, you may support the education of children in remote areas of India.</p><p><strong>Add your preferred donation/contact method here before publishing.</strong></p></div></section></main><script src="js/app.js"></script><script src="js/protection.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="Support education through Wish Educational Foundation — an initiative dedicated to helping students with educational needs."
+  >
+
+  <meta
+    name="author"
+    content="Vipul Vekariya"
+  >
+
+  <title>
+    Support Education | Vipul Vekariya
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+
+
+  <style>
+
+    :root {
+
+      --support-bg: #f5f0e6;
+      --support-paper: #fffdf8;
+      --support-ink: #24211d;
+      --support-muted: #746d64;
+      --support-border: #d8d0c2;
+      --support-accent: #806344;
+      --support-dark: #211f1b;
+
+    }
+
+
+    body {
+
+      background:
+        var(--support-bg);
+
+      color:
+        var(--support-ink);
+
+    }
+
+
+    .support-page {
+
+      padding:
+        65px 0
+        90px;
+
+    }
+
+
+    .support-wrap {
+
+      width:
+        min(
+          1040px,
+          92%
+        );
+
+      margin:
+        0 auto;
+
+    }
+
+
+
+    /* HERO */
+
+    .support-hero {
+
+      max-width: 780px;
+
+      margin:
+        0 auto
+        60px;
+
+      text-align: center;
+
+    }
+
+
+    .support-kicker {
+
+      margin-bottom: 14px;
+
+      color:
+        var(--support-accent);
+
+      font-family:
+        Arial,
+        sans-serif;
+
+      font-size: .75rem;
+
+      font-weight: 700;
+
+      letter-spacing: .17em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .support-title {
+
+      margin:
+        0 0
+        20px;
+
+      font-family:
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(
+          2.8rem,
+          7vw,
+          5rem
+        );
+
+      line-height: 1.05;
+
+      font-weight: 500;
+
+    }
+
+
+    .support-intro {
+
+      max-width: 680px;
+
+      margin:
+        0 auto;
+
+      color:
+        var(--support-muted);
+
+      font-family:
+        Arial,
+        sans-serif;
+
+      font-size: 1.04rem;
+
+      line-height: 1.85;
+
+    }
+
+
+
+    /* FOUNDATION */
+
+    .foundation-box {
+
+      padding:
+        50px
+        55px;
+
+      margin-bottom:
+        30px;
+
+      background:
+        var(--support-paper);
+
+      border:
+        1px solid
+        var(--support-border);
+
+      border-radius: 6px;
+
+      text-align: center;
+
+      box-shadow:
+        0 14px 35px
+        rgba(
+          50,
+          40,
+          25,
+          .06
+        );
+
+    }
+
+
+    .foundation-label {
+
+      margin-bottom:
+        13px;
+
+      color:
+        var(--support-accent);
+
+      font-family:
+        Arial,
+        sans-serif;
+
+      font-size: .72rem;
+
+      font-weight: 700;
+
+      letter-spacing: .15em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .foundation-name {
+
+      margin:
+        0 0
+        20px;
+
+      font-family:
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(
+          1.9rem,
+          5vw,
+          3rem
+        );
+
+      font-weight: 500;
+
+    }
+
+
+    .foundation-text {
+
+      max-width:
+        700px;
+
+      margin:
+        0 auto;
+
+      color:
+        var(--support-muted);
+
+      font-family:
+        Arial,
+        sans-serif;
+
+      font-size: .98rem;
+
+      line-height: 1.85;
+
+    }
+
+
+
+    /* PURPOSE */
+
+    .purpose {
+
+      padding:
+        55px 0;
+
+    }
+
+
+    .section-heading {
+
+      max-width:
+        650px;
+
+      margin:
+        0 auto
+        35px;
+
+      text-align: center;
+
+    }
+
+
+    .section-heading h2 {
+
+      margin:
+        0 0
+        13px;
+
+      font-family:
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(
+          2rem,
+          4vw,
+          2.8rem
+        );
+
+      font-weight: 500;
+
+    }
+
+
+    .section-heading p {
+
+      margin: 0;
+
+      color:
+        var(--support-muted);
+
+      font-family:
+        Arial,
+        sans-serif;
+
+      line-height: 1.75;
+
+    }
+
+
+
+    /* SUPPORT CARDS */
+
+    .support-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          3,
+          1fr
+        );
+
+      gap: 20px;
+
+    }
+
+
+    .support-card {
+
+      padding:
+        32px
+        27px;
+
+      background:
+        var(--support-paper);
+
+      border:
+        1px solid
+        var(--support-border);
+
+      border-radius: 5px;
+
+    }
+
+
+    .support-number {
+
+      margin-bottom:
+        20px;
+
+      color:
+        var(--support-accent);
+
+      font-family:
+        Georgia,
+        serif;
+
+      font-size:
+        2rem;
+
+      font-style: italic;
+
+    }
+
+
+    .support-card h3 {
+
+      margin:
+        0 0
+        12px;
+
+      font-family:
+        Georgia,
+        serif;
+
+      font-size: 1.3rem;
+
+      font-weight: 500;
+
+    }
+
+
+    .support-card p {
+
+      margin: 0;
+
+      color:
+        var(--support-muted);
+
+      font-family:
+        Arial,
+        sans-serif;
+
+      font-size: .9rem;
+
+      line-height: 1.7;
+
+    }
+
+
+
+    /* MESSAGE */
+
+    .education-message {
+
+      margin:
+        35px 0;
+
+      padding:
+        55px
+        60px;
+
+      background:
+        var(--support-dark);
+
+      color: #fff;
+
+      border-radius: 6px;
+
+      text-align: center;
+
+    }
+
+
+    .education-message blockquote {
+
+      max-width:
+        700px;
+
+      margin:
+        0 auto
+        18px;
+
+      font-family:
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(
+          1.55rem,
+          3.5vw,
+          2.25rem
+        );
+
+      line-height: 1.5;
+
+      font-weight: 400;
+
+    }
+
+
+    .education-message p {
+
+      margin: 0;
+
+      color:
+        rgba(
+          255,
+          255,
+          255,
+          .7
+        );
+
+      font-family:
+        Arial,
+        sans-serif;
+
+      font-size: .85rem;
+
+    }
+
+
+
+    /* CONTRIBUTION */
+
+    .contribution {
+
+      margin-top:
+        55px;
+
+      padding:
+        50px
+        55px;
+
+      background:
+        var(--support-paper);
+
+      border:
+        1px solid
+        var(--support-border);
+
+      border-radius: 6px;
+
+      text-align: center;
+
+    }
+
+
+    .contribution h2 {
+
+      margin:
+        0 0
+        16px;
+
+      font-family:
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(
+          1.8rem,
+          4vw,
+          2.6rem
+        );
+
+      font-weight: 500;
+
+    }
+
+
+    .contribution > p {
+
+      max-width:
+        650px;
+
+      margin:
+        0 auto
+        28px;
+
+      color:
+        var(--support-muted);
+
+      font-family:
+        Arial,
+        sans-serif;
+
+      line-height: 1.8;
+
+    }
+
+
+    .contribution-status {
+
+      display:
+        inline-block;
+
+      padding:
+        13px
+        22px;
+
+      border:
+        1px solid
+        var(--support-border);
+
+      border-radius:
+        30px;
+
+      color:
+        var(--support-accent);
+
+      font-family:
+        Arial,
+        sans-serif;
+
+      font-size: .82rem;
+
+      font-weight: 700;
+
+      letter-spacing: .04em;
+
+    }
+
+
+
+    /* TRANSPARENCY */
+
+    .transparency {
+
+      max-width:
+        720px;
+
+      margin:
+        55px auto
+        0;
+
+      padding-top:
+        30px;
+
+      border-top:
+        1px solid
+        var(--support-border);
+
+      text-align: center;
+
+    }
+
+
+    .transparency h3 {
+
+      margin:
+        0 0
+        12px;
+
+      font-family:
+        Georgia,
+        serif;
+
+      font-size: 1.35rem;
+
+      font-weight: 500;
+
+    }
+
+
+    .transparency p {
+
+      margin: 0;
+
+      color:
+        var(--support-muted);
+
+      font-family:
+        Arial,
+        sans-serif;
+
+      font-size: .84rem;
+
+      line-height: 1.75;
+
+    }
+
+
+
+    /* MOBILE */
+
+    @media
+    (max-width: 800px) {
+
+      .support-grid {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+    }
+
+
+    @media
+    (max-width: 600px) {
+
+      .support-page {
+
+        padding:
+          45px 0
+          70px;
+
+      }
+
+
+      .support-title {
+
+        font-size:
+          clamp(
+            2.5rem,
+            13vw,
+            4rem
+          );
+
+      }
+
+
+      .foundation-box,
+      .contribution {
+
+        padding:
+          38px
+          25px;
+
+      }
+
+
+      .education-message {
+
+        padding:
+          42px
+          25px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<main class="support-page">
+
+  <div class="support-wrap">
+
+
+    <!-- HERO -->
+
+    <header class="support-hero">
+
+      <div class="support-kicker">
+        A Small Step · A Meaningful Future
+      </div>
+
+      <h1 class="support-title">
+        Support Education
+      </h1>
+
+      <p class="support-intro">
+
+        Education can open doors that circumstances
+        sometimes keep closed. This space is dedicated
+        to supporting educational opportunities for
+        students who may need a helping hand.
+
+      </p>
+
+    </header>
+
+
+
+    <!-- FOUNDATION -->
+
+    <section class="foundation-box">
+
+      <div class="foundation-label">
+        Education Initiative
+      </div>
+
+      <h2 class="foundation-name">
+        Wish Educational Foundation
+      </h2>
+
+      <p class="foundation-text">
+
+        Wish Educational Foundation is the name
+        associated with this educational support
+        initiative. Its purpose is to encourage and
+        support students in meeting meaningful
+        educational needs and continuing their
+        learning journey.
+
+      </p>
+
+    </section>
+
+
+
+    <!-- HOW SUPPORT CAN HELP -->
+
+    <section class="purpose">
+
+      <div class="section-heading">
+
+        <h2>
+          How Support Can Help
+        </h2>
+
+        <p>
+
+          Educational needs can be simple,
+          but even small assistance can make
+          learning easier for a student.
+
+        </p>
+
+      </div>
+
+
+      <div class="support-grid">
+
+
+        <article class="support-card">
+
+          <div class="support-number">
+            01
+          </div>
+
+          <h3>
+            Books & Learning Material
+          </h3>
+
+          <p>
+
+            Helping students obtain useful
+            books, reference material and
+            other resources needed for
+            their studies.
+
+          </p>
+
+        </article>
+
+
+
+        <article class="support-card">
+
+          <div class="support-number">
+            02
+          </div>
+
+          <h3>
+            School Essentials
+          </h3>
+
+          <p>
+
+            Supporting basic educational
+            requirements such as notebooks,
+            stationery and other learning
+            essentials.
+
+          </p>
+
+        </article>
+
+
+
+        <article class="support-card">
+
+          <div class="support-number">
+            03
+          </div>
+
+          <h3>
+            Educational Support
+          </h3>
+
+          <p>
+
+            Providing appropriate assistance
+            toward educational needs where
+            support can help a student
+            continue learning.
+
+          </p>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- MESSAGE -->
+
+    <section class="education-message">
+
+      <blockquote>
+
+        “A book placed in the right hands
+        can become the beginning of
+        a different future.”
+
+      </blockquote>
+
+      <p>
+        — A thought behind the initiative
+      </p>
+
+    </section>
+
+
+
+    <!-- CONTRIBUTION -->
+
+    <section class="contribution">
+
+      <h2>
+        Contribute to Education
+      </h2>
+
+      <p>
+
+        If you would like to support this
+        educational initiative, verified
+        contribution and contact information
+        can be provided here.
+
+      </p>
+
+
+      <div class="contribution-status">
+
+        Contribution details will be
+        available here
+
+      </div>
+
+    </section>
+
+
+
+    <!-- TRANSPARENCY -->
+
+    <section class="transparency">
+
+      <h3>
+        A Note on Transparency
+      </h3>
+
+      <p>
+
+        Financial or contribution details
+        should be used only after they are
+        officially published on this page.
+        No tax benefit, registration status
+        or other legal claim is represented
+        here unless specifically stated
+        with the appropriate information.
+
+      </p>
+
+    </section>
+
+
+  </div>
+
+</main>
+
+
+<script src="js/app.js"></script>
+
+
+</body>
+
+</html>
