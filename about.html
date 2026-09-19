@@ -1,27 +1,1180 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Vipul Vekariya Literary Website — original literature in English, Gujarati and Hindi."><title>About Vipul Vekariya | Vipul Vekariya</title><link rel="stylesheet" href="css/style.css"></head><body><main><section class='section'><div class='wrap'><h1 class='page-title'>About Vipul Vekariya</h1><p>
-  Writer · Thinker · Storyteller . Dreamer 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
 
-Vipul Vekariya is a writer and storyteller drawn to the quiet, often unnoticed moments of everyday life.
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-His writing explores the emotions that exist beneath ordinary conversations, familiar places, relationships, solitude and the questions that quietly remain within us. He finds stories not only in extraordinary events, but also in a silent street at night, an old wall, a passing thought, a human relationship or a moment of loneliness.
+  <title>About Vipul Vekariya | Writer · Thinker · Storyteller</title>
 
-Through stories, novels, essays, poetry, philosophy and Vipul Vichar, he tries to look at life from a slightly different angle — to pause, observe and ask questions that we often move too quickly to ask.
+  <meta name="description"
+        content="About Vipul Vekariya — writer, thinker and storyteller creating stories, novels, essays, philosophy, poetry and Vipul Vichar in English, Gujarati and Hindi.">
 
-His writing is rooted in a simple belief:
+  <meta name="author"
+        content="Vipul Vekariya">
 
-Sometimes the things we don't say carry more meaning than the things we do.
+  <meta name="robots"
+        content="index, follow">
 
-This literary space is a collection of his writings, thoughts and creative work in English, Gujarati and Hindi.
+  <meta property="og:title"
+        content="About Vipul Vekariya">
 
-It is not merely a place to publish words. It is a place to preserve thoughts, share stories and create a quiet connection between the writer and the reader.
+  <meta property="og:description"
+        content="Writer · Thinker · Storyteller. Explore the literary world of Vipul Vekariya.">
 
-A Note to the Reader
+  <meta property="og:type"
+        content="website">
 
-Every reader brings a different life, a different experience and a different meaning to a piece of writing.
+  <meta property="og:image"
+        content="assets/vipul-photo.JPG">
 
-Therefore, these writings are not intended to tell the reader what to think. They are an invitation to pause, feel, think and perhaps see something familiar in a new way.
+  <style>
 
-If a story reminds you of someone, if a thought stays with you after you have finished reading, or if a few words make you look at your own life differently, then the writing has found its purpose.
+    /* =========================================================
+       VIPUL VEKARIYA — ABOUT PAGE
+       FINAL VERSION 3
+       No external libraries required
+       ========================================================= */
 
-Welcome to my literary space.
-Read slowly. Think freely. Feel deeply.
+    :root {
+      --paper: #f5f0e6;
+      --paper-light: #fbf8f1;
+      --ink: #211f1b;
+      --muted: #6d675d;
+      --line: #d8d0c2;
+      --accent: #7b6245;
+      --accent-dark: #4f3d2c;
+      --white: #ffffff;
+      --shadow: 0 12px 35px rgba(40, 32, 20, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+      line-height: 1.75;
+    }
+
+    /* =========================
+       HEADER
+       ========================= */
+
+    header {
+      background: rgba(251, 248, 241, 0.97);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    .header-inner {
+      width: min(1180px, 92%);
+      margin: auto;
+      min-height: 78px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+
+      text-decoration: none;
+      color: var(--ink);
+    }
+
+    .brand-logo {
+      width: 52px;
+      height: 52px;
+
+      object-fit: contain;
+      display: block;
+    }
+
+    .brand-name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+
+    .brand-tagline {
+      display: none;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    nav a {
+      color: var(--ink);
+      text-decoration: none;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      font-size: 0.88rem;
+      padding: 8px 10px;
+      border-radius: 30px;
+
+      transition:
+        background 0.2s ease,
+        color 0.2s ease;
+    }
+
+    nav a:hover {
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    /* =========================
+       MAIN
+       ========================= */
+
+    main {
+      width: min(1120px, 92%);
+      margin: auto;
+      padding: 65px 0 80px;
+    }
+
+    .intro-label {
+      color: var(--accent);
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      max-width: 850px;
+
+      font-size: clamp(3rem, 8vw, 6.2rem);
+      line-height: 0.95;
+      letter-spacing: -0.045em;
+
+      margin-bottom: 34px;
+    }
+
+    .opening {
+      max-width: 850px;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      line-height: 1.8;
+
+      color: #39362f;
+
+      margin-bottom: 55px;
+    }
+
+    /* =========================
+       AUTHOR PROFILE
+       ========================= */
+
+    .author-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 45px;
+
+      align-items: center;
+
+      margin-bottom: 80px;
+    }
+
+    .portrait-area {
+      display: flex;
+      justify-content: center;
+    }
+
+    .portrait-frame {
+      width: min(100%, 390px);
+
+      background: var(--paper-light);
+
+      padding: 14px;
+
+      border: 1px solid var(--line);
+
+      box-shadow: var(--shadow);
+    }
+
+    .portrait-frame img {
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      object-fit: cover;
+    }
+
+    .portrait-caption {
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      font-size: 0.75rem;
+      color: var(--muted);
+
+      text-align: center;
+
+      padding-top: 12px;
+    }
+
+    .profile-text h2 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+
+      line-height: 1.05;
+
+      margin-bottom: 24px;
+    }
+
+    .profile-text p {
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      font-size: 1.03rem;
+
+      line-height: 1.9;
+
+      color: #38352f;
+
+      margin-bottom: 20px;
+    }
+
+    /* =========================
+       DIVIDER
+       ========================= */
+
+    .ornament {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      margin: 65px 0;
+    }
+
+    .ornament::before,
+    .ornament::after {
+      content: "";
+
+      height: 1px;
+
+      background: var(--line);
+
+      flex: 1;
+    }
+
+    .ornament span {
+      color: var(--accent);
+
+      font-size: 1.1rem;
+    }
+
+    /* =========================
+       LITERARY AREAS
+       ========================= */
+
+    .section-title {
+      font-size: clamp(2.1rem, 5vw, 3.5rem);
+
+      line-height: 1.05;
+
+      margin-bottom: 20px;
+    }
+
+    .section-intro {
+      max-width: 760px;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      color: #4e4a43;
+
+      font-size: 1rem;
+
+      line-height: 1.8;
+
+      margin-bottom: 35px;
+    }
+
+    .literary-grid {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 12px;
+    }
+
+    .literary-item {
+      border: 1px solid var(--line);
+
+      background: rgba(255, 255, 255, 0.30);
+
+      padding: 20px 16px;
+
+      min-height: 100px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .literary-item:hover {
+      transform: translateY(-3px);
+
+      box-shadow: 0 8px 20px rgba(40, 32, 20, 0.08);
+    }
+
+    .literary-item strong {
+      font-size: 1.1rem;
+
+      margin-bottom: 3px;
+    }
+
+    .literary-item span {
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      color: var(--muted);
+
+      font-size: 0.78rem;
+    }
+
+    /* =========================
+       NOTE TO READER
+       ========================= */
+
+    .reader-note {
+      margin-top: 80px;
+
+      background: var(--ink);
+
+      color: var(--white);
+
+      padding: 42px 28px;
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+    .reader-note::before {
+      content: "“";
+
+      position: absolute;
+
+      right: 15px;
+      top: -55px;
+
+      font-size: 13rem;
+
+      line-height: 1;
+
+      color: rgba(255,255,255,0.06);
+    }
+
+    .reader-note h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+
+      line-height: 1.1;
+
+      margin-bottom: 22px;
+
+      position: relative;
+    }
+
+    .reader-note p {
+      max-width: 780px;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      font-size: 1rem;
+
+      line-height: 1.85;
+
+      color: #eee9df;
+
+      margin-bottom: 18px;
+
+      position: relative;
+    }
+
+    .closing-line {
+      margin-top: 28px;
+
+      font-family: Georgia, serif !important;
+
+      font-size: 1.25rem !important;
+
+      font-style: italic;
+
+      color: var(--white) !important;
+    }
+
+    /* =========================
+       LANGUAGE
+       ========================= */
+
+    .languages {
+      margin-top: 70px;
+
+      text-align: center;
+
+      padding: 35px 20px;
+
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .languages p {
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      color: var(--muted);
+
+      font-size: 0.85rem;
+
+      margin-bottom: 15px;
+    }
+
+    .language-list {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      justify-content: center;
+
+      gap: 10px;
+    }
+
+    .language {
+      border: 1px solid var(--line);
+
+      padding: 8px 18px;
+
+      background: var(--paper-light);
+
+      font-size: 0.95rem;
+    }
+
+    /* =========================
+       NAVIGATION BUTTONS
+       ========================= */
+
+    .page-actions {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      justify-content: center;
+
+      gap: 12px;
+
+      margin-top: 65px;
+    }
+
+    .button {
+      display: inline-block;
+
+      text-decoration: none;
+
+      padding: 13px 23px;
+
+      border-radius: 40px;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      font-size: 0.88rem;
+
+      transition: all 0.2s ease;
+    }
+
+    .button-dark {
+      background: var(--ink);
+
+      color: var(--white);
+    }
+
+    .button-dark:hover {
+      background: var(--accent-dark);
+    }
+
+    .button-light {
+      border: 1px solid var(--ink);
+
+      color: var(--ink);
+
+      background: transparent;
+    }
+
+    .button-light:hover {
+      background: var(--ink);
+
+      color: var(--white);
+    }
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    footer {
+      border-top: 1px solid var(--line);
+
+      background: #eee8dc;
+
+      padding: 32px 20px;
+
+      text-align: center;
+    }
+
+    .footer-logo {
+      width: 48px;
+      height: 48px;
+
+      object-fit: contain;
+
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      color: var(--muted);
+
+      font-size: 0.78rem;
+
+      line-height: 1.7;
+    }
+
+    .footer-links {
+      margin-top: 8px;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+
+      text-decoration: none;
+
+      margin: 0 5px;
+    }
+
+    .footer-links a:hover {
+      color: var(--ink);
+      text-decoration: underline;
+    }
+
+    /* =========================
+       TABLET
+       ========================= */
+
+    @media (min-width: 700px) {
+
+      main {
+        padding-top: 90px;
+      }
+
+      .author-grid {
+        grid-template-columns: 0.8fr 1.2fr;
+
+        gap: 70px;
+      }
+
+      .portrait-area {
+        justify-content: flex-start;
+      }
+
+      .literary-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .reader-note {
+        padding: 60px;
+      }
+
+    }
+
+    /* =========================
+       DESKTOP
+       ========================= */
+
+    @media (min-width: 950px) {
+
+      .brand-tagline {
+        display: block;
+
+        font-family:
+          Arial,
+          Helvetica,
+          sans-serif;
+
+        font-size: 0.68rem;
+
+        color: var(--muted);
+
+        margin-top: -4px;
+      }
+
+      .brand-text {
+        display: flex;
+
+        flex-direction: column;
+      }
+
+      .portrait-frame {
+        width: 350px;
+      }
+
+      .opening {
+        font-size: 1.2rem;
+      }
+
+    }
+
+    /* =========================
+       SMALL MOBILE
+       ========================= */
+
+    @media (max-width: 600px) {
+
+      .header-inner {
+        min-height: 68px;
+      }
+
+      .brand-logo {
+        width: 44px;
+        height: 44px;
+      }
+
+      .brand-name {
+        font-size: 1rem;
+      }
+
+      nav a {
+        font-size: 0.78rem;
+        padding: 6px 7px;
+      }
+
+      nav a:nth-child(n+3) {
+        display: none;
+      }
+
+      main {
+        width: 88%;
+        padding-top: 55px;
+      }
+
+      h1 {
+        font-size: 3.35rem;
+      }
+
+      .opening {
+        font-size: 1rem;
+      }
+
+      .author-grid {
+        gap: 32px;
+      }
+
+      .profile-text p {
+        font-size: 0.97rem;
+      }
+
+      .literary-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .literary-item {
+        min-height: 90px;
+      }
+
+      .reader-note {
+        padding: 35px 23px;
+      }
+
+      .page-actions {
+        flex-direction: column;
+      }
+
+      .button {
+        text-align: center;
+        width: 100%;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ======================================================
+       HEADER
+       ====================================================== -->
+
+  <header>
+
+    <div class="header-inner">
+
+      <a href="index.html"
+         class="brand"
+         aria-label="Vipul Vekariya Home">
+
+        <img
+          src="assets/logo.png"
+          alt="Vipul Vekariya Literary Website Logo"
+          class="brand-logo">
+
+        <span class="brand-text">
+
+          <span class="brand-name">
+            Vipul Vekariya
+          </span>
+
+          <span class="brand-tagline">
+            Writer · Thinker · Storyteller
+          </span>
+
+        </span>
+
+      </a>
+
+      <nav aria-label="Main navigation">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="library.html">
+          Library
+        </a>
+
+        <a href="about.html"
+           aria-current="page">
+          About
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- ======================================================
+       MAIN CONTENT
+       ====================================================== -->
+
+  <main>
+
+    <div class="intro-label">
+      Writer · Thinker · Storyteller
+    </div>
+
+    <h1>
+      About Vipul<br>
+      Vekariya
+    </h1>
+
+    <p class="opening">
+      A literary space for stories, thoughts, questions and
+      quiet observations about life.
+    </p>
+
+
+    <!-- ====================================================
+         AUTHOR PROFILE
+         ==================================================== -->
+
+    <section class="author-grid">
+
+      <div class="portrait-area">
+
+        <figure class="portrait-frame">
+
+          <img
+            src="assets/vipul-photo.JPG"
+            alt="Vipul Vekariya"
+            loading="eager">
+
+          <figcaption class="portrait-caption">
+            Vipul Vekariya
+          </figcaption>
+
+        </figure>
+
+      </div>
+
+
+      <div class="profile-text">
+
+        <h2>
+          The writer behind the words
+        </h2>
+
+        <p>
+          <strong>Vipul Vekariya</strong> is a writer and
+          storyteller drawn to the quiet, often unnoticed
+          moments of everyday life.
+        </p>
+
+        <p>
+          His writing explores the emotions beneath ordinary
+          conversations, familiar places, relationships,
+          solitude, memory and the questions that quietly
+          remain within us.
+        </p>
+
+        <p>
+          He finds stories not only in extraordinary events,
+          but also in a silent street at night, an old wall,
+          a passing thought, a human relationship or a moment
+          of loneliness.
+        </p>
+
+        <p>
+          Through stories, novels, essays, poetry, philosophy
+          and <strong>Vipul Vichar</strong>, he tries to look
+          at life from a slightly different angle — to pause,
+          observe and ask questions that we often move too
+          quickly to ask.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         WRITING PHILOSOPHY
+         ==================================================== -->
+
+    <div class="ornament">
+      <span>✦</span>
+    </div>
+
+
+    <section>
+
+      <h2 class="section-title">
+        A way of looking at life
+      </h2>
+
+      <p class="section-intro">
+        His writing is rooted in a simple belief:
+        sometimes the things we do not say carry more
+        meaning than the things we do.
+      </p>
+
+      <div class="profile-text">
+
+        <p>
+          Life often moves quickly. People meet, speak,
+          work, laugh, argue, leave and continue moving.
+          Yet beneath these ordinary moments there are
+          countless thoughts and emotions that remain
+          unspoken.
+        </p>
+
+        <p>
+          Writing, for Vipul, is a way of slowing down long
+          enough to notice some of those things.
+        </p>
+
+        <p>
+          A street after midnight, a cup of tea beside a
+          quiet road, an old building, a conversation that
+          ended too soon, a memory that refuses to disappear
+          — all of these can become the beginning of a story.
+        </p>
+
+        <p>
+          His work therefore moves between observation and
+          imagination, between everyday life and the larger
+          questions that life quietly places before us.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         LITERARY WORK
+         ==================================================== -->
+
+    <div class="ornament">
+      <span>✦</span>
+    </div>
+
+
+    <section>
+
+      <h2 class="section-title">
+        The literary space
+      </h2>
+
+      <p class="section-intro">
+        This website is an independent literary home for
+        Vipul Vekariya's writing and creative work.
+        It brings together different forms of writing in
+        English, Gujarati and Hindi.
+      </p>
+
+
+      <div class="literary-grid">
+
+        <div class="literary-item">
+          <strong>Stories</strong>
+          <span>વાર્તાઓ · कहानियाँ</span>
+        </div>
+
+        <div class="literary-item">
+          <strong>Novels</strong>
+          <span>નવલકથા · उपन्यास</span>
+        </div>
+
+        <div class="literary-item">
+          <strong>Essays</strong>
+          <span>નિબંધ · निबंध</span>
+        </div>
+
+        <div class="literary-item">
+          <strong>Philosophy</strong>
+          <span>તત્વજ્ઞાન · दर्शन</span>
+        </div>
+
+        <div class="literary-item">
+          <strong>Vipul Vichar</strong>
+          <span>વિપુલ વિચાર · विचार</span>
+        </div>
+
+        <div class="literary-item">
+          <strong>Poetry</strong>
+          <span>કવિતાઓ · कविताएँ</span>
+        </div>
+
+        <div class="literary-item">
+          <strong>Quotes of Vipul</strong>
+          <span>Original thoughts</span>
+        </div>
+
+        <div class="literary-item">
+          <strong>Videos</strong>
+          <span>Literary & creative work</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         NOTE TO READER
+         ==================================================== -->
+
+    <section class="reader-note">
+
+      <h2>
+        A Note to the Reader
+      </h2>
+
+      <p>
+        Every reader brings a different life, a different
+        experience and a different meaning to a piece of
+        writing.
+      </p>
+
+      <p>
+        Therefore, these writings are not intended to tell
+        the reader what to think. They are an invitation to
+        pause, feel, think and perhaps see something familiar
+        in a new way.
+      </p>
+
+      <p>
+        If a story reminds you of someone, if a thought stays
+        with you after you have finished reading, or if a few
+        words make you look at your own life differently,
+        then the writing has found its purpose.
+      </p>
+
+      <p class="closing-line">
+        Welcome to my literary space.
+        Read slowly. Think freely. Feel deeply.
+      </p>
+
+    </section>
+
+
+    <!-- ====================================================
+         LANGUAGES
+         ==================================================== -->
+
+    <section class="languages">
+
+      <p>
+        Writing and creative work in
+      </p>
+
+      <div class="language-list">
+
+        <span class="language">
+          English
+        </span>
+
+        <span class="language">
+          ગુજરાતી
+        </span>
+
+        <span class="language">
+          हिन्दी
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         PAGE ACTIONS
+         ==================================================== -->
+
+    <div class="page-actions">
+
+      <a
+        href="library.html"
+        class="button button-dark">
+        Enter the Library
+      </a>
+
+      <a
+        href="index.html"
+        class="button button-light">
+        Back to Home
+      </a>
+
+      <a
+        href="contact.html"
+        class="button button-light">
+        Contact / Permissions
+      </a>
+
+    </div>
+
+  </main>
+
+
+  <!-- ======================================================
+       FOOTER
+       ====================================================== -->
+
+  <footer>
+
+    <img
+      src="assets/logo.png"
+      alt="Vipul Vekariya Logo"
+      class="footer-logo">
+
+    <p>
+      © <span id="year"></span> Vipul Vekariya.
+      All rights reserved.
+    </p>
+
+    <p class="footer-links">
+
+      <a href="copyright.html">
+        Copyright
+      </a>
+
+      ·
+
+      <a href="contact.html">
+        Permissions
+      </a>
+
+      ·
+
+      <a href="donate.html">
+        Support Education
+      </a>
+
+    </p>
+
+  </footer>
+
+
+  <!-- ======================================================
+       YEAR
+       ====================================================== -->
+
+  <script>
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+  </script>
+
+</body>
+</html>
