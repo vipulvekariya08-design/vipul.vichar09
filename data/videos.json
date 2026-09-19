@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "id": "video-001",
+    "title": "YOUR VIDEO TITLE",
+    "language": "Gujarati",
+    "category": "Vipul Vichar",
+    "description": "A short description of the video.",
+    "url": "YOUR YOUTUBE VIDEO LINK"
+  }
+]
