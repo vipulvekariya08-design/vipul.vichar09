@@ -216,31 +216,31 @@ function draw() {
       "book cover-page";
 
 
-    book.innerHTML = `
+book.innerHTML = `
 
-      <div class="cover-small">
-        A LITERARY WORK BY
-      </div>
+  <div class="cover-small">
+    A LITERARY WORK BY
+  </div>
 
-      <h1>
-        ${escapeHTML(bookData.title)}
-      </h1>
+  <h1>
+    ${escapeHTML(bookData.title)}
+  </h1>
 
-      <div class="cover-author">
-        ${escapeHTML(bookData.author)}
-      </div>
+  <div class="cover-author">
+    ${escapeHTML(bookData.author)}
+  </div>
 
-      <div class="cover-meta">
+  <div class="cover-meta">
 
-        ${escapeHTML(bookData.category)}
+    ${escapeHTML(bookData.category)}
 
-        &nbsp;·&nbsp;
+    &nbsp;·&nbsp;
 
-        ${escapeHTML(bookData.language)}
+    ${escapeHTML(bookData.language)}
 
-      </div>
+  </div>
 
-    `;
+`;
 
   }
 
