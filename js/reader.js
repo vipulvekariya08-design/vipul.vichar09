@@ -55,31 +55,33 @@ async function start() {
 
   if (!id) {
 
-   book.innerHTML = `
+    book.innerHTML = `
+      <h1>Writing not found</h1>
+      <p>No writing was selected.</p>
+    `;
 
-  <h1>
-    ${escapeHTML(bookData.title)}
-  </h1>
+    return;
 
-  <div class="cover-small">
-    A LITERARY WORK BY
-  </div>
+  }
 
-  <div class="cover-author">
-    ${escapeHTML(bookData.author)}
-  </div>
 
-  <div class="cover-meta">
+  try {
 
-    ${escapeHTML(bookData.category)}
+    const response =
+      await fetch(
+        `writings/${encodeURIComponent(id)}/content.json`,
+        {
+          cache: "no-store"
+        }
+      );
 
-    &nbsp;·&nbsp;
 
-    ${escapeHTML(bookData.language)}
+    if (!response.ok) {
 
-  </div>
+      throw new Error(
+        "Writing not found."
+      );
 
-`;
     }
 
 
@@ -214,15 +216,15 @@ function draw() {
       "book cover-page";
 
 
-book.innerHTML = `
-
-  <div class="cover-small">
-    A LITERARY WORK BY
-  </div>
+    book.innerHTML = `
 
   <h1>
     ${escapeHTML(bookData.title)}
   </h1>
+
+  <div class="cover-small">
+    A LITERARY WORK BY
+  </div>
 
   <div class="cover-author">
     ${escapeHTML(bookData.author)}
@@ -239,7 +241,6 @@ book.innerHTML = `
   </div>
 
 `;
-
   }
 
 
