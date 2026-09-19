@@ -55,33 +55,31 @@ async function start() {
 
   if (!id) {
 
-    book.innerHTML = `
-      <h1>Writing not found</h1>
-      <p>No writing was selected.</p>
-    `;
+   book.innerHTML = `
 
-    return;
+  <h1>
+    ${escapeHTML(bookData.title)}
+  </h1>
 
-  }
+  <div class="cover-small">
+    A LITERARY WORK BY
+  </div>
 
+  <div class="cover-author">
+    ${escapeHTML(bookData.author)}
+  </div>
 
-  try {
+  <div class="cover-meta">
 
-    const response =
-      await fetch(
-        `writings/${encodeURIComponent(id)}/content.json`,
-        {
-          cache: "no-store"
-        }
-      );
+    ${escapeHTML(bookData.category)}
 
+    &nbsp;·&nbsp;
 
-    if (!response.ok) {
+    ${escapeHTML(bookData.language)}
 
-      throw new Error(
-        "Writing not found."
-      );
+  </div>
 
+`;
     }
 
 
