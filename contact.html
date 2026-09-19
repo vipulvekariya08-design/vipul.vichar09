@@ -553,7 +553,46 @@
       }
 
     }
+/* CONTACT ACTION BUTTONS */
 
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.whatsapp-button {
+  display: inline-block;
+  padding: 13px 25px;
+  background: #1f6b45;
+  color: #ffffff;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: .86rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.whatsapp-button:hover {
+  opacity: .88;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 500px) {
+  .contact-actions {
+    flex-direction: column;
+  }
+
+  .contact-actions a {
+    width: min(100%, 280px);
+  }
+}
+
+
+/* THIS LINE WAS ALREADY THERE */
+</style>
   </style>
 
 </head>
