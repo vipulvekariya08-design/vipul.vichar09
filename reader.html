@@ -2,52 +2,46 @@
 <html lang="en">
 
 <head>
+
   <meta charset="utf-8">
 
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
 
-  <meta name="description"
-        content="Read original literary works by Vipul Vekariya.">
+  <meta
+    name="description"
+    content="Read original literary works by Vipul Vekariya."
+  >
 
-  <meta name="author"
-        content="Vipul Vekariya">
+  <meta
+    name="author"
+    content="Vipul Vekariya"
+  >
 
-  <meta name="robots"
-        content="index, follow">
+  <meta
+    name="robots"
+    content="index, follow"
+  >
 
   <title>Reader | Vipul Vekariya</title>
 
-  <link rel="stylesheet"
-        href="css/style.css">
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+
 
   <style>
-/* ======================================================
-   READER CONTENT PROTECTION
-   Discourages normal selection and copying
-   ====================================================== */
 
-#book,
-#book * {
-  -webkit-user-select: none !important;
-  -moz-user-select: none !important;
-  -ms-user-select: none !important;
-  user-select: none !important;
-
-  -webkit-touch-callout: none !important;
-}
-
-#book img {
-  -webkit-user-drag: none;
-  user-drag: none;
-  pointer-events: none;
-}
     /* ======================================================
        VIPUL VEKARIYA
        FINAL LITERARY READER
        ====================================================== */
 
     :root {
+
       --reader-paper: #fffdf8;
       --reader-bg: #f5f0e6;
       --reader-ink: #24211d;
@@ -55,12 +49,16 @@
       --reader-border: #d8d0c2;
       --reader-accent: #7b6245;
       --reader-dark: #211f1b;
+
     }
 
 
     body {
+
       background: var(--reader-bg);
+
     }
+
 
 
     /* ======================================================
@@ -68,10 +66,15 @@
        ====================================================== */
 
     .reader-shell {
+
       width: min(760px, 92%);
+
       margin: 0 auto;
+
       padding: 45px 0 80px;
+
     }
+
 
 
     /* ======================================================
@@ -79,8 +82,11 @@
        ====================================================== */
 
     .reader-top {
+
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
 
       gap: 20px;
@@ -92,25 +98,36 @@
         "Noto Sans Gujarati",
         "Noto Sans Devanagari",
         sans-serif;
+
     }
 
 
     .reader-top a {
+
       color: var(--reader-ink);
+
       text-decoration: none;
+
       font-size: 1rem;
+
     }
 
 
     .reader-top a:hover {
+
       text-decoration: underline;
+
     }
 
 
     #pageNo {
+
       color: var(--reader-muted);
+
       font-size: .9rem;
+
     }
+
 
 
     /* ======================================================
@@ -118,6 +135,7 @@
        ====================================================== */
 
     .book {
+
       background: var(--reader-paper);
 
       border: 1px solid var(--reader-border);
@@ -132,9 +150,44 @@
       min-height: 520px;
 
       display: flex;
+
       flex-direction: column;
+
       justify-content: center;
+
     }
+
+
+
+    /* ======================================================
+       CONTENT PROTECTION
+       Makes normal copying difficult for casual visitors
+       ====================================================== */
+
+    #book,
+    #book * {
+
+      -webkit-user-select: none !important;
+
+      -moz-user-select: none !important;
+
+      -ms-user-select: none !important;
+
+      user-select: none !important;
+
+      -webkit-touch-callout: none !important;
+
+    }
+
+
+    #book img {
+
+      -webkit-user-drag: none;
+
+      pointer-events: none;
+
+    }
+
 
 
     /* ======================================================
@@ -142,6 +195,7 @@
        ====================================================== */
 
     .book .meta {
+
       font-family:
         Arial,
         "Noto Sans Gujarati",
@@ -153,10 +207,12 @@
       font-size: .85rem;
 
       margin-bottom: 28px;
+
     }
 
 
     .reading-text {
+
       white-space: pre-line;
 
       font-family:
@@ -168,12 +224,19 @@
 
       color: var(--reader-ink);
 
-      font-size: clamp(1.18rem, 4.6vw, 1.55rem);
+      font-size:
+        clamp(
+          1.18rem,
+          4.6vw,
+          1.55rem
+        );
 
       line-height: 1.95;
 
       letter-spacing: .005em;
+
     }
+
 
 
     /* ======================================================
@@ -181,6 +244,7 @@
        ====================================================== */
 
     .book.cover-page {
+
       min-height: 680px;
 
       background:
@@ -195,43 +259,64 @@
       text-align: center;
 
       align-items: center;
+
       justify-content: center;
 
       padding: 50px 30px;
+
     }
 
 
     .cover-page .cover-small {
-      font-family: Arial, sans-serif;
 
-      color: rgba(255,255,255,.55);
+      font-family:
+        Arial,
+        sans-serif;
+
+      color:
+        rgba(
+          255,
+          255,
+          255,
+          .55
+        );
 
       font-size: .9rem;
 
       letter-spacing: .08em;
 
       margin-bottom: 35px;
+
     }
 
 
     .cover-page h1 {
+
       font-family:
         Georgia,
         "Noto Serif Devanagari",
         "Noto Serif Gujarati",
         serif;
 
-      font-size: clamp(2.5rem, 8vw, 4.5rem);
+      font-size:
+        clamp(
+          2.5rem,
+          8vw,
+          4.5rem
+        );
 
       line-height: 1.2;
 
       max-width: 620px;
 
-      margin: 0 auto 35px;
+      margin:
+        0 auto 35px;
+
     }
 
 
     .cover-page .cover-author {
+
       font-family:
         Arial,
         sans-serif;
@@ -239,10 +324,12 @@
       font-size: 1.2rem;
 
       margin-bottom: 55px;
+
     }
 
 
     .cover-page .cover-meta {
+
       font-family:
         Arial,
         "Noto Sans Gujarati",
@@ -251,8 +338,16 @@
 
       font-size: .9rem;
 
-      color: rgba(255,255,255,.8);
+      color:
+        rgba(
+          255,
+          255,
+          255,
+          .8
+        );
+
     }
+
 
 
     /* ======================================================
@@ -260,6 +355,7 @@
        ====================================================== */
 
     .reader-controls {
+
       display: grid;
 
       grid-template-columns:
@@ -268,11 +364,15 @@
       gap: 12px;
 
       margin-top: 24px;
+
     }
 
 
     .reader-controls button {
-      border: 1px solid var(--reader-border);
+
+      border:
+        1px solid
+        var(--reader-border);
 
       background: #fff;
 
@@ -296,19 +396,29 @@
         background .2s ease,
         color .2s ease,
         opacity .2s ease;
+
     }
 
 
-    .reader-controls button:hover:not(:disabled) {
-      background: var(--reader-dark);
+    .reader-controls
+    button:hover:not(:disabled) {
+
+      background:
+        var(--reader-dark);
+
       color: #fff;
+
     }
 
 
     .reader-controls button:disabled {
+
       opacity: .32;
+
       cursor: default;
+
     }
+
 
 
     /* ======================================================
@@ -316,35 +426,50 @@
        ====================================================== */
 
     .finish-page {
+
       text-align: center;
+
       align-items: center;
+
     }
 
 
     .finish-mark {
-      color: var(--reader-accent);
+
+      color:
+        var(--reader-accent);
 
       font-size: 1.3rem;
 
       margin-bottom: 18px;
+
     }
 
 
     .finish-page h2 {
+
       font-family:
         Georgia,
         "Noto Serif Devanagari",
         "Noto Serif Gujarati",
         serif;
 
-      font-size: clamp(2.2rem, 7vw, 3.5rem);
+      font-size:
+        clamp(
+          2.2rem,
+          7vw,
+          3.5rem
+        );
 
       margin-bottom: 12px;
+
     }
 
 
     .finish-title {
-      color: var(--reader-muted);
+
+      color:
+        var(--reader-muted);
 
       font-family:
         Arial,
@@ -353,10 +478,12 @@
         sans-serif;
 
       margin-bottom: 35px;
+
     }
 
 
     .finish-author {
+
       font-family:
         Georgia,
         serif;
@@ -364,7 +491,9 @@
       font-style: italic;
 
       font-size: 1.1rem;
+
     }
+
 
 
     /* ======================================================
@@ -372,44 +501,56 @@
        ====================================================== */
 
     .reader-bottom {
+
       margin-top: 55px;
 
       padding: 38px 28px;
 
-      background: var(--reader-dark);
+      background:
+        var(--reader-dark);
 
       color: #fff;
 
       text-align: center;
+
     }
 
 
     .reader-bottom h2 {
+
       font-size: 1.8rem;
 
       margin-bottom: 15px;
+
     }
 
 
     .reader-bottom p {
+
       max-width: 600px;
 
-      margin: 0 auto 22px;
+      margin:
+        0 auto 22px;
 
-      font-family: Arial, sans-serif;
+      font-family:
+        Arial,
+        sans-serif;
 
       line-height: 1.75;
 
       color: #e7e1d8;
+
     }
 
 
     .reader-bottom .btn {
+
       display: inline-block;
 
       background: #fff;
 
-      color: var(--reader-dark);
+      color:
+        var(--reader-dark);
 
       text-decoration: none;
 
@@ -417,13 +558,19 @@
 
       border-radius: 30px;
 
-      font-family: Arial, sans-serif;
+      font-family:
+        Arial,
+        sans-serif;
+
     }
 
 
     .reader-bottom .btn:hover {
+
       opacity: .9;
+
     }
+
 
 
     /* ======================================================
@@ -431,27 +578,38 @@
        ====================================================== */
 
     .reader-copyright {
+
       margin-top: 35px;
 
       padding-top: 25px;
 
-      border-top: 1px solid var(--reader-border);
+      border-top:
+        1px solid
+        var(--reader-border);
 
       text-align: center;
 
-      font-family: Arial, sans-serif;
+      font-family:
+        Arial,
+        sans-serif;
 
       font-size: .76rem;
 
-      color: var(--reader-muted);
+      color:
+        var(--reader-muted);
 
       line-height: 1.7;
+
     }
 
 
     .reader-copyright a {
-      color: var(--reader-muted);
+
+      color:
+        var(--reader-muted);
+
     }
+
 
 
     /* ======================================================
@@ -461,55 +619,71 @@
     @media (max-width: 600px) {
 
       .reader-shell {
+
         width: 92%;
 
         padding-top: 30px;
+
       }
 
 
       .book {
+
         min-height: 0;
 
         padding:
           42px
           25px;
+
       }
 
 
       .book.cover-page {
+
         min-height: 620px;
+
       }
 
 
       .reading-text {
+
         font-size: 1.22rem;
 
         line-height: 1.9;
+
       }
 
 
       .book .meta {
+
         margin-bottom: 23px;
+
       }
 
 
       .reader-controls {
+
         grid-template-columns:
           1fr
           .65fr
           1fr;
+
       }
 
 
       .reader-controls button {
+
         padding: 10px 8px;
 
         font-size: .85rem;
+
       }
 
 
       .reader-bottom {
+
         padding: 34px 22px;
+
       }
 
     }
@@ -519,47 +693,66 @@
 </head>
 
 
+
 <body>
 
 
 <main>
 
+
   <div class="reader-shell">
 
 
-    <!-- READER TOP -->
+    <!-- ==================================================
+         READER TOP
+         ================================================== -->
 
     <div class="reader-top">
 
       <a href="library.html">
+
         ← Library
+
       </a>
 
+
       <span id="pageNo">
+
         Cover
+
       </span>
 
     </div>
 
 
-    <!-- BOOK -->
+
+    <!-- ==================================================
+         BOOK
+         Content is inserted here by reader.js
+         ================================================== -->
 
     <article
       id="book"
-      class="book">
+      class="book"
+    >
 
       Loading…
 
     </article>
 
 
-    <!-- CONTROLS -->
+
+    <!-- ==================================================
+         CONTROLS
+         ================================================== -->
 
     <div class="reader-controls">
 
+
       <button
         id="prev"
-        type="button">
+        type="button"
+      >
 
         ← Previous
 
@@ -568,7 +761,8 @@
 
       <button
         id="share"
-        type="button">
+        type="button"
+      >
 
         Share
 
@@ -577,79 +771,343 @@
 
       <button
         id="next"
-        type="button">
+        type="button"
+      >
 
         Next →
 
       </button>
 
+
     </div>
 
 
-    <!-- SUPPORT EDUCATION -->
+
+    <!-- ==================================================
+         SUPPORT EDUCATION
+         ================================================== -->
 
     <section
       class="reader-bottom"
-      id="supportEducation">
+      id="supportEducation"
+    >
 
       <h2>
+
         Support Education
+
       </h2>
 
+
       <p>
-        If this writing touched you, consider supporting
-        educational opportunities for children who need them.
-        Your contribution can help students in remote areas
-        of India receive better learning opportunities.
+
+        If this writing touched you,
+        consider supporting educational
+        opportunities for children who
+        need them.
+
+        Your contribution can help
+        students in remote areas of India
+        receive better learning
+        opportunities.
+
       </p>
+
 
       <a
         class="btn"
-        href="donate.html">
+        href="donate.html"
+      >
 
         Support Education
 
       </a>
 
+
     </section>
 
 
-    <!-- COPYRIGHT -->
+
+    <!-- ==================================================
+         COPYRIGHT
+         ================================================== -->
 
     <div class="reader-copyright">
 
-      <p>
-        © <span id="readerYear"></span>
-        Vipul Vekariya.
-        All rights reserved.
-      </p>
 
       <p>
-        This literary work may not be copied,
-        reproduced or republished without permission.
-        <a href="copyright.html">
-          Copyright & Permissions
-        </a>
+
+        ©
+        <span id="readerYear"></span>
+        Vipul Vekariya.
+        All rights reserved.
+
       </p>
+
+
+      <p>
+
+        This literary work may not be
+        copied, reproduced or republished
+        without permission.
+
+        <a href="copyright.html">
+
+          Copyright &amp; Permissions
+
+        </a>
+
+      </p>
+
 
     </div>
 
 
   </div>
 
+
 </main>
 
 
-<!-- EXISTING SITE SYSTEM -->
 
-  const range = selection.getRangeAt(0);
+<!-- ======================================================
+     WEBSITE SYSTEM
+     ====================================================== -->
 
-        if (
-          book.contains(range.commonAncestorContainer) ||
-          range.commonAncestorContainer === book
-        ) {
+<script src="js/app.js"></script>
 
-          event.preventDefault();
+
+<!-- ======================================================
+     READER ENGINE
+     Keep reader.js unchanged.
+     ====================================================== -->
+
+<script src="js/reader.js"></script>
+
+
+
+<!-- ======================================================
+     BASIC CONTENT PROTECTION
+
+     Purpose:
+     Make ordinary copy/paste difficult for normal readers.
+
+     This does NOT claim to provide absolute DRM.
+     ====================================================== -->
+
+<script>
+
+(function () {
+
+  "use strict";
+
+
+  const book =
+    document.getElementById("book");
+
+
+  if (!book) {
+
+    return;
+
+  }
+
+
+
+  /* ------------------------------------------------------
+     BLOCK RIGHT CLICK INSIDE BOOK
+     ------------------------------------------------------ */
+
+  book.addEventListener(
+    "contextmenu",
+    function (event) {
+
+      event.preventDefault();
+
+    }
+  );
+
+
+
+  /* ------------------------------------------------------
+     BLOCK COPY INSIDE BOOK
+     ------------------------------------------------------ */
+
+  book.addEventListener(
+    "copy",
+    function (event) {
+
+      event.preventDefault();
+
+      if (window.getSelection) {
+
+        window
+          .getSelection()
+          .removeAllRanges();
+
+      }
+
+    }
+  );
+
+
+
+  /* ------------------------------------------------------
+     BLOCK CUT
+     ------------------------------------------------------ */
+
+  book.addEventListener(
+    "cut",
+    function (event) {
+
+      event.preventDefault();
+
+    }
+  );
+
+
+
+  /* ------------------------------------------------------
+     BLOCK SELECTION START
+     ------------------------------------------------------ */
+
+  book.addEventListener(
+    "selectstart",
+    function (event) {
+
+      event.preventDefault();
+
+    }
+  );
+
+
+
+  /* ------------------------------------------------------
+     BLOCK DRAGGING
+     ------------------------------------------------------ */
+
+  book.addEventListener(
+    "dragstart",
+    function (event) {
+
+      event.preventDefault();
+
+    }
+  );
+
+
+
+  /* ------------------------------------------------------
+     BLOCK COMMON COPY SHORTCUTS WHILE POINTER IS IN BOOK
+     ------------------------------------------------------ */
+
+  let pointerInsideBook = false;
+
+
+  book.addEventListener(
+    "mouseenter",
+    function () {
+
+      pointerInsideBook = true;
+
+    }
+  );
+
+
+  book.addEventListener(
+    "mouseleave",
+    function () {
+
+      pointerInsideBook = false;
+
+    }
+  );
+
+
+  book.addEventListener(
+    "touchstart",
+    function () {
+
+      pointerInsideBook = true;
+
+    },
+    {
+      passive: true
+    }
+  );
+
+
+
+  document.addEventListener(
+    "keydown",
+    function (event) {
+
+      const key =
+        String(event.key || "")
+          .toLowerCase();
+
+
+      const command =
+        event.ctrlKey ||
+        event.metaKey;
+
+
+      if (!command) {
+
+        return;
+
+      }
+
+
+      if (
+        key !== "c" &&
+        key !== "x" &&
+        key !== "a"
+      ) {
+
+        return;
+
+      }
+
+
+      const selection =
+        window.getSelection();
+
+
+      let selectionInsideBook =
+        false;
+
+
+      if (
+        selection &&
+        selection.rangeCount > 0
+      ) {
+
+        const range =
+          selection.getRangeAt(0);
+
+
+        const container =
+          range.commonAncestorContainer;
+
+
+        selectionInsideBook =
+          container === book ||
+          book.contains(container);
+
+      }
+
+
+      if (
+        pointerInsideBook ||
+        selectionInsideBook
+      ) {
+
+        event.preventDefault();
+
+
+        if (selection) {
+
           selection.removeAllRanges();
 
         }
@@ -657,18 +1115,51 @@
       }
 
     }
+  );
 
-  });
+
+
+  /* ------------------------------------------------------
+     EXTRA IMAGE PROTECTION
+     ------------------------------------------------------ */
+
+  book.addEventListener(
+    "mousedown",
+    function (event) {
+
+      if (
+        event.target &&
+        event.target.tagName === "IMG"
+      ) {
+
+        event.preventDefault();
+
+      }
+
+    }
+  );
+
 
 })();
+
 </script>
-  document.getElementById(
-    "readerYear"
-  ).textContent =
-    new Date().getFullYear();
+
+
+
+<!-- ======================================================
+     CURRENT YEAR
+     ====================================================== -->
+
+<script>
+
+  document
+    .getElementById("readerYear")
+    .textContent =
+      new Date().getFullYear();
 
 </script>
 
 
 </body>
+
 </html>
