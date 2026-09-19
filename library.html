@@ -1,1 +1,1348 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Vipul Vekariya Literary Website — original literature in English, Gujarati and Hindi."><title>Library | Vipul Vekariya</title><link rel="stylesheet" href="css/style.css"></head><body><main><section class="section"><div class="wrap"><div class="kicker">The Library</div><h1 class="page-title">Read my writings</h1><input id="search" class="search-input" placeholder="Search title, category or language"><div id="writing-list" class="grid" style="margin-top:24px"></div></div></section></main><script src="js/app.js"></script><script src="js/protection.js"></script><script src="js/library.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Library | Vipul Vekariya</title>
+
+  <meta name="description"
+        content="Explore the literary works of Vipul Vekariya — stories, novels, essays, philosophy, Vipul Vichar and poetry in English, Gujarati and Hindi.">
+
+  <meta name="author" content="Vipul Vekariya">
+
+  <meta name="robots" content="index, follow">
+
+  <style>
+
+    /* =====================================================
+       VIPUL VEKARIYA — LITERARY LIBRARY
+       FINAL VERSION 3
+       ===================================================== */
+
+    :root {
+      --paper: #f5f0e6;
+      --paper-light: #fbf8f1;
+      --ink: #211f1b;
+      --muted: #6d675d;
+      --line: #d8d0c2;
+      --accent: #7b6245;
+      --accent-dark: #4f3d2c;
+      --white: #ffffff;
+      --shadow: 0 12px 35px rgba(40,32,20,.09);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+
+    /* =====================================================
+       HEADER
+       ===================================================== */
+
+    header {
+      background: rgba(251,248,241,.97);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    .header-inner {
+      width: min(1180px,92%);
+      min-height: 78px;
+      margin: auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+
+      text-decoration: none;
+    }
+
+    .brand-logo {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .brand-tagline {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--muted);
+      font-size: .68rem;
+      margin-top: 3px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .88rem;
+
+      padding: 8px 10px;
+      border-radius: 30px;
+
+      transition: .2s ease;
+    }
+
+    nav a:hover,
+    nav a[aria-current="page"] {
+      background: var(--ink);
+      color: var(--white);
+    }
+
+
+    /* =====================================================
+       HERO
+       ===================================================== */
+
+    .library-hero {
+      width: min(1120px,92%);
+      margin: auto;
+
+      padding: 80px 0 50px;
+    }
+
+    .eyebrow {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .78rem;
+      font-weight: 700;
+
+      letter-spacing: .16em;
+      text-transform: uppercase;
+
+      color: var(--accent);
+
+      margin-bottom: 13px;
+    }
+
+    .library-hero h1 {
+      font-size: clamp(3.2rem,9vw,6.5rem);
+      line-height: .95;
+      letter-spacing: -.045em;
+
+      margin-bottom: 25px;
+    }
+
+    .library-intro {
+      max-width: 720px;
+
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.08rem;
+      line-height: 1.8;
+
+      color: #454139;
+    }
+
+
+    /* =====================================================
+       SEARCH
+       ===================================================== */
+
+    .library-tools {
+      width: min(1120px,92%);
+      margin: 0 auto 28px;
+    }
+
+    .search-wrap {
+      position: relative;
+      max-width: 700px;
+    }
+
+    .search-input {
+      width: 100%;
+
+      padding: 16px 20px;
+
+      border: 1px solid var(--line);
+      border-radius: 50px;
+
+      background: var(--paper-light);
+
+      color: var(--ink);
+
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
+
+      outline: none;
+
+      transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+    }
+
+    .search-input:focus {
+      border-color: var(--accent);
+
+      box-shadow:
+        0 0 0 3px rgba(123,98,69,.10);
+    }
+
+
+    /* =====================================================
+       FILTERS
+       ===================================================== */
+
+    .filter-area {
+      width: min(1120px,92%);
+      margin: 0 auto 45px;
+    }
+
+    .filter-label {
+      font-family: Arial, Helvetica, sans-serif;
+
+      font-size: .75rem;
+      font-weight: 700;
+
+      letter-spacing: .12em;
+      text-transform: uppercase;
+
+      color: var(--muted);
+
+      margin: 18px 0 9px;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .filter-btn {
+      border: 1px solid var(--line);
+
+      background: var(--paper-light);
+
+      color: var(--ink);
+
+      padding: 9px 15px;
+
+      border-radius: 40px;
+
+      cursor: pointer;
+
+      font-family:
+        Arial,
+        "Noto Sans Gujarati",
+        "Noto Sans Devanagari",
+        sans-serif;
+
+      font-size: .82rem;
+
+      transition: .2s ease;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--ink);
+      color: var(--white);
+      border-color: var(--ink);
+    }
+
+
+    /* =====================================================
+       LIBRARY
+       ===================================================== */
+
+    .library-section {
+      width: min(1120px,92%);
+      margin: auto;
+
+      padding-bottom: 90px;
+    }
+
+    .library-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+
+      padding-bottom: 15px;
+
+      border-bottom: 1px solid var(--line);
+
+      margin-bottom: 28px;
+    }
+
+    .library-heading h2 {
+      font-size: clamp(1.8rem,4vw,2.8rem);
+    }
+
+    #result-count {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--muted);
+      font-size: .8rem;
+    }
+
+    #writing-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 26px;
+    }
+
+
+    /* =====================================================
+       BOOK CARDS
+       The classes below also style cards generated by
+       the existing V3 library.js.
+       ===================================================== */
+
+    #writing-list .card {
+      background: var(--paper-light);
+
+      border: 1px solid var(--line);
+
+      padding: 14px;
+
+      display: flex;
+      flex-direction: column;
+
+      min-width: 0;
+
+      box-shadow: var(--shadow);
+
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+    }
+
+    #writing-list .card:hover {
+      transform: translateY(-5px);
+
+      box-shadow:
+        0 18px 45px rgba(40,32,20,.13);
+    }
+
+    #writing-list .cover {
+      width: 100%;
+      aspect-ratio: 2 / 3;
+
+      object-fit: cover;
+
+      display: block;
+
+      background: #292621;
+
+      margin-bottom: 18px;
+    }
+
+    #writing-list .meta {
+      font-family:
+        Arial,
+        "Noto Sans Gujarati",
+        "Noto Sans Devanagari",
+        sans-serif;
+
+      color: var(--accent);
+
+      font-size: .72rem;
+      font-weight: 700;
+
+      letter-spacing: .06em;
+      text-transform: uppercase;
+
+      margin-bottom: 7px;
+    }
+
+    #writing-list h2 {
+      font-family:
+        Georgia,
+        "Noto Serif Devanagari",
+        "Noto Serif Gujarati",
+        serif;
+
+      font-size: 1.55rem;
+      line-height: 1.3;
+
+      margin-bottom: 10px;
+    }
+
+    #writing-list .card p {
+      font-family:
+        Arial,
+        "Noto Sans Gujarati",
+        "Noto Sans Devanagari",
+        sans-serif;
+
+      color: #514c44;
+
+      font-size: .92rem;
+      line-height: 1.7;
+
+      margin-bottom: 18px;
+    }
+
+    #writing-list .btn {
+      display: inline-block;
+
+      align-self: flex-start;
+
+      margin-top: auto;
+
+      padding: 10px 19px;
+
+      background: var(--ink);
+      color: var(--white);
+
+      border-radius: 40px;
+
+      text-decoration: none;
+
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .82rem;
+
+      transition: .2s ease;
+    }
+
+    #writing-list .btn:hover {
+      background: var(--accent-dark);
+    }
+
+
+    /* =====================================================
+       EMPTY / ERROR STATE
+       ===================================================== */
+
+    .empty-message {
+      grid-column: 1 / -1;
+
+      padding: 50px 25px;
+
+      text-align: center;
+
+      border: 1px solid var(--line);
+
+      background: rgba(255,255,255,.25);
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      color: var(--muted);
+    }
+
+
+    /* =====================================================
+       LIBRARY MESSAGE
+       ===================================================== */
+
+    .library-note {
+      width: min(900px,92%);
+      margin: 0 auto 80px;
+
+      text-align: center;
+
+      padding: 45px 25px;
+
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .library-note h2 {
+      font-size: clamp(1.8rem,4vw,2.7rem);
+      margin-bottom: 15px;
+    }
+
+    .library-note p {
+      font-family: Arial, Helvetica, sans-serif;
+
+      color: var(--muted);
+
+      max-width: 650px;
+      margin: auto;
+
+      line-height: 1.8;
+    }
+
+
+    /* =====================================================
+       FOOTER
+       ===================================================== */
+
+    footer {
+      background: #eee8dc;
+
+      border-top: 1px solid var(--line);
+
+      padding: 34px 20px;
+
+      text-align: center;
+    }
+
+    .footer-logo {
+      width: 48px;
+      height: 48px;
+
+      object-fit: contain;
+
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      font-family: Arial, Helvetica, sans-serif;
+
+      color: var(--muted);
+
+      font-size: .78rem;
+
+      line-height: 1.7;
+    }
+
+    .footer-links {
+      margin-top: 8px;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: var(--muted);
+      margin: 0 5px;
+    }
+
+    .footer-links a:hover {
+      color: var(--ink);
+      text-decoration: underline;
+    }
+
+
+    /* =====================================================
+       TABLET
+       ===================================================== */
+
+    @media (min-width: 620px) {
+
+      #writing-list {
+        grid-template-columns:
+          repeat(2, minmax(0,1fr));
+      }
+
+    }
+
+
+    /* =====================================================
+       DESKTOP
+       ===================================================== */
+
+    @media (min-width: 950px) {
+
+      #writing-list {
+        grid-template-columns:
+          repeat(3, minmax(0,1fr));
+      }
+
+    }
+
+
+    /* =====================================================
+       SMALL MOBILE
+       ===================================================== */
+
+    @media (max-width: 600px) {
+
+      .header-inner {
+        min-height: 68px;
+      }
+
+      .brand-logo {
+        width: 44px;
+        height: 44px;
+      }
+
+      .brand-name {
+        font-size: 1rem;
+      }
+
+      .brand-tagline {
+        display: none;
+      }
+
+      nav a {
+        font-size: .78rem;
+        padding: 6px 7px;
+      }
+
+      nav a:nth-child(n+3) {
+        display: none;
+      }
+
+      .library-hero {
+        padding-top: 55px;
+      }
+
+      .library-hero h1 {
+        font-size: 3.5rem;
+      }
+
+      .library-intro {
+        font-size: .98rem;
+      }
+
+      .filter-btn {
+        font-size: .77rem;
+        padding: 8px 12px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+<!-- =======================================================
+     HEADER
+     ======================================================= -->
+
+<header>
+
+  <div class="header-inner">
+
+    <a href="index.html"
+       class="brand"
+       aria-label="Vipul Vekariya Home">
+
+      <img
+        src="assets/logo.png"
+        alt="Vipul Vekariya Literary Website Logo"
+        class="brand-logo">
+
+      <span class="brand-text">
+
+        <span class="brand-name">
+          Vipul Vekariya
+        </span>
+
+        <span class="brand-tagline">
+          Writer · Thinker · Storyteller
+        </span>
+
+      </span>
+
+    </a>
+
+
+    <nav aria-label="Main navigation">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="library.html"
+         aria-current="page">
+        Library
+      </a>
+
+      <a href="about.html">
+        About
+      </a>
+
+      <a href="contact.html">
+        Contact
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+<!-- =======================================================
+     MAIN
+     ======================================================= -->
+
+<main>
+
+
+  <!-- HERO -->
+
+  <section class="library-hero">
+
+    <div class="eyebrow">
+      The Literary Collection
+    </div>
+
+    <h1>
+      Library
+    </h1>
+
+    <p class="library-intro">
+
+      Explore the writings of Vipul Vekariya —
+      stories, novels, essays, philosophy, poetry
+      and thoughts written in English, ગુજરાતી and हिन्दी.
+
+      Each work opens in a dedicated reading experience
+      designed for quiet, comfortable reading.
+
+    </p>
+
+  </section>
+
+
+
+  <!-- SEARCH -->
+
+  <section class="library-tools">
+
+    <div class="search-wrap">
+
+      <input
+        type="search"
+        id="search"
+        class="search-input"
+        placeholder="Search writings..."
+        aria-label="Search writings">
+
+    </div>
+
+  </section>
+
+
+
+  <!-- FILTERS -->
+
+  <section class="filter-area">
+
+
+    <div class="filter-label">
+      Category
+    </div>
+
+
+    <div class="filters"
+         id="category-filters">
+
+      <button
+        class="filter-btn active"
+        data-category="all">
+        All Writings
+      </button>
+
+      <button
+        class="filter-btn"
+        data-category="Stories">
+        Stories / વાર્તાઓ
+      </button>
+
+      <button
+        class="filter-btn"
+        data-category="Novels">
+        Novels / નવલકથા
+      </button>
+
+      <button
+        class="filter-btn"
+        data-category="Essays">
+        Essays / નિબંધ
+      </button>
+
+      <button
+        class="filter-btn"
+        data-category="Philosophy">
+        Philosophy / તત્વજ્ઞાન
+      </button>
+
+      <button
+        class="filter-btn"
+        data-category="Vipul Vichar">
+        Vipul Vichar / વિપુલ વિચાર
+      </button>
+
+      <button
+        class="filter-btn"
+        data-category="Poetry">
+        Poetry / કવિતાઓ
+      </button>
+
+    </div>
+
+
+
+    <div class="filter-label">
+      Language
+    </div>
+
+
+    <div class="filters"
+         id="language-filters">
+
+      <button
+        class="filter-btn active"
+        data-language="all">
+        All Languages
+      </button>
+
+      <button
+        class="filter-btn"
+        data-language="English">
+        English
+      </button>
+
+      <button
+        class="filter-btn"
+        data-language="Gujarati">
+        ગુજરાતી
+      </button>
+
+      <button
+        class="filter-btn"
+        data-language="Hindi">
+        हिन्दी
+      </button>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- WRITINGS -->
+
+  <section class="library-section">
+
+    <div class="library-heading">
+
+      <h2>
+        Writings
+      </h2>
+
+      <span id="result-count">
+        Loading…
+      </span>
+
+    </div>
+
+
+    <!--
+       IMPORTANT:
+
+       Do NOT manually place book cards here.
+
+       JavaScript reads:
+       data/writings.json
+
+       and creates the cards automatically.
+    -->
+
+    <div id="writing-list">
+
+      <div class="empty-message">
+        Loading the library…
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- LIBRARY MESSAGE -->
+
+  <section class="library-note">
+
+    <h2>
+      Words deserve time.
+    </h2>
+
+    <p>
+      This library is meant for unhurried reading.
+      Choose a piece, enter the reader and allow
+      the words to take their own time.
+    </p>
+
+  </section>
+
+
+</main>
+
+
+
+<!-- =======================================================
+     FOOTER
+     ======================================================= -->
+
+<footer>
+
+  <img
+    src="assets/logo.png"
+    alt="Vipul Vekariya Logo"
+    class="footer-logo">
+
+  <p>
+    © <span id="year"></span>
+    Vipul Vekariya.
+    All rights reserved.
+  </p>
+
+  <p class="footer-links">
+
+    <a href="about.html">
+      About
+    </a>
+
+    ·
+
+    <a href="copyright.html">
+      Copyright
+    </a>
+
+    ·
+
+    <a href="contact.html">
+      Permissions
+    </a>
+
+    ·
+
+    <a href="donate.html">
+      Support Education
+    </a>
+
+  </p>
+
+</footer>
+
+
+
+<!-- =======================================================
+     LIBRARY ENGINE
+     ======================================================= -->
+
+<script>
+
+let allWritings = [];
+let selectedCategory = "all";
+let selectedLanguage = "all";
+
+
+/* -------------------------------------------------------
+   ESCAPE CONTENT
+   ------------------------------------------------------- */
+
+function escapeHTML(value) {
+
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+
+}
+
+
+/* -------------------------------------------------------
+   CREATE BOOK CARD
+   ------------------------------------------------------- */
+
+function createCard(item) {
+
+  const id =
+    encodeURIComponent(item.id || "");
+
+  const title =
+    escapeHTML(item.title || "Untitled");
+
+  const category =
+    escapeHTML(item.category || "");
+
+  const language =
+    escapeHTML(item.language || "");
+
+  const description =
+    escapeHTML(item.description || "");
+
+  const cover =
+    escapeHTML(item.cover || "");
+
+
+  return `
+
+    <article class="card">
+
+      <img
+        class="cover"
+        src="${cover}"
+        alt="${title} cover"
+        loading="lazy">
+
+      <div class="meta">
+
+        ${category}
+
+        ${category && language ? " · " : ""}
+
+        ${language}
+
+      </div>
+
+      <h2>
+        ${title}
+      </h2>
+
+      <p>
+        ${description}
+      </p>
+
+      <a
+        class="btn"
+        href="reader.html?id=${id}">
+
+        Read
+
+      </a>
+
+    </article>
+
+  `;
+
+}
+
+
+
+/* -------------------------------------------------------
+   FILTER AND DISPLAY
+   ------------------------------------------------------- */
+
+function displayWritings() {
+
+  const searchBox =
+    document.getElementById("search");
+
+  const query =
+    searchBox.value
+      .trim()
+      .toLowerCase();
+
+
+  const filtered =
+    allWritings.filter(item => {
+
+      const itemCategory =
+        String(item.category || "");
+
+      const itemLanguage =
+        String(item.language || "");
+
+
+      const searchableText = [
+
+        item.title,
+        item.category,
+        item.language,
+        item.description
+
+      ]
+      .join(" ")
+      .toLowerCase();
+
+
+      const searchMatches =
+        !query ||
+        searchableText.includes(query);
+
+
+      const categoryMatches =
+        selectedCategory === "all" ||
+        itemCategory.toLowerCase() ===
+        selectedCategory.toLowerCase();
+
+
+      const languageMatches =
+        selectedLanguage === "all" ||
+        itemLanguage.toLowerCase() ===
+        selectedLanguage.toLowerCase();
+
+
+      return (
+        searchMatches &&
+        categoryMatches &&
+        languageMatches
+      );
+
+    });
+
+
+  const list =
+    document.getElementById("writing-list");
+
+
+  const counter =
+    document.getElementById("result-count");
+
+
+  counter.textContent =
+    filtered.length === 1
+      ? "1 writing"
+      : `${filtered.length} writings`;
+
+
+  if (!filtered.length) {
+
+    list.innerHTML = `
+
+      <div class="empty-message">
+
+        No writings found for the selected
+        search or filters.
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  list.innerHTML =
+    filtered
+      .map(createCard)
+      .join("");
+
+}
+
+
+
+/* -------------------------------------------------------
+   LOAD WRITINGS.JSON
+   ------------------------------------------------------- */
+
+async function loadLibrary() {
+
+  const list =
+    document.getElementById("writing-list");
+
+
+  try {
+
+    const response =
+      await fetch(
+        "data/writings.json",
+        { cache: "no-store" }
+      );
+
+
+    if (!response.ok) {
+
+      throw new Error(
+        "Unable to load writings."
+      );
+
+    }
+
+
+    const data =
+      await response.json();
+
+
+    if (!Array.isArray(data)) {
+
+      throw new Error(
+        "Invalid writings data."
+      );
+
+    }
+
+
+    allWritings = data;
+
+    displayWritings();
+
+  }
+
+  catch (error) {
+
+    console.error(error);
+
+
+    list.innerHTML = `
+
+      <div class="empty-message">
+
+        The library could not be loaded.
+        Please try again shortly.
+
+      </div>
+
+    `;
+
+
+    document.getElementById(
+      "result-count"
+    ).textContent = "";
+
+  }
+
+}
+
+
+
+/* -------------------------------------------------------
+   SEARCH
+   ------------------------------------------------------- */
+
+document
+  .getElementById("search")
+  .addEventListener(
+    "input",
+    displayWritings
+  );
+
+
+
+/* -------------------------------------------------------
+   CATEGORY FILTERS
+   ------------------------------------------------------- */
+
+document
+  .querySelectorAll(
+    "[data-category]"
+  )
+  .forEach(button => {
+
+    button.addEventListener(
+      "click",
+      function () {
+
+        document
+          .querySelectorAll(
+            "[data-category]"
+          )
+          .forEach(btn =>
+            btn.classList.remove(
+              "active"
+            )
+          );
+
+
+        this.classList.add(
+          "active"
+        );
+
+
+        selectedCategory =
+          this.dataset.category;
+
+
+        displayWritings();
+
+      }
+    );
+
+  });
+
+
+
+/* -------------------------------------------------------
+   LANGUAGE FILTERS
+   ------------------------------------------------------- */
+
+document
+  .querySelectorAll(
+    "[data-language]"
+  )
+  .forEach(button => {
+
+    button.addEventListener(
+      "click",
+      function () {
+
+        document
+          .querySelectorAll(
+            "[data-language]"
+          )
+          .forEach(btn =>
+            btn.classList.remove(
+              "active"
+            )
+          );
+
+
+        this.classList.add(
+          "active"
+        );
+
+
+        selectedLanguage =
+          this.dataset.language;
+
+
+        displayWritings();
+
+      }
+    );
+
+  });
+
+
+
+/* -------------------------------------------------------
+   CURRENT YEAR
+   ------------------------------------------------------- */
+
+document.getElementById(
+  "year"
+).textContent =
+  new Date().getFullYear();
+
+
+
+/* -------------------------------------------------------
+   START LIBRARY
+   ------------------------------------------------------- */
+
+loadLibrary();
+
+</script>
+
+
+</body>
+</html>
